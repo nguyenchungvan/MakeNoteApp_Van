@@ -1,0 +1,15 @@
+<div class="container pb-5 mb-5">
+    <div class="mt-5">
+        <% if(result != '') {%>
+            <% result.forEach((note,index)=>{%>
+                <a href="/dashboard/dashboard/note/<%= note._id %>" style="text-decoration: none" class="card-bg card border-dark border-co mt-3">
+                    <p class="text-white" style="padding-left: 2%; padding-top: 10px;"><%= note.title %> <br></p>  
+                </a>
+            <%})%>
+        <%} else {%>
+            <p>No item found</p>
+        <%}
+        %>
+        
+    </div>
+</div>
